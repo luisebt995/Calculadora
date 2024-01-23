@@ -51,6 +51,12 @@
             android:layout_height="wrap_content"
             android:text="Multiplicar" />
 
+        <Button
+            android:id="@+id/btnDividir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dividir" />
+
         <TextView
             android:id="@+id/txtResult"
             android:layout_width="match_parent"

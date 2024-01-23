@@ -16,11 +16,13 @@ class MainActivity : AppCompatActivity() {
         val suma:Button = findViewById(R.id.btnSumar)
         val resta:Button = findViewById(R.id.btnRestar)
         val multiplica:Button = findViewById(R.id.btnMultiplicar)
+        val divide:Button = findViewById(R.id.btnDividir)
         val output:TextView = findViewById(R.id.txtResult)
 
         suma.setOnClickListener { sumarMetodo(x1, x2, output) }
         resta.setOnClickListener { restarMetodo(x1, x2, output) }
         multiplica.setOnClickListener { multiplicarMetodo(x1, x2, output) }
+        divide.setOnClickListener { dividirMetodo(x1, x2, output) }
     }
 
     private fun sumarMetodo(obj1:EditText, obj2:EditText, res:TextView){
@@ -48,6 +50,15 @@ class MainActivity : AppCompatActivity() {
         if (num1 == null || num2 == null) res.text ="Introduzca ambos numeros"
         else{
             res.text = (num1 * num2).toString()
+        }
+    }
+
+    private fun dividirMetodo(obj1:EditText, obj2:EditText, res:TextView){
+        val num1 = obj1.text.toString().toIntOrNull()
+        val num2 = obj2.text.toString().toIntOrNull()
+        if (num1 == null || num2 == null) res.text ="Introduzca ambos numeros"
+        else{
+            res.text = (num1 / num2).toString()
         }
     }
 }
